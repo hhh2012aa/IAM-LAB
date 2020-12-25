@@ -1,14 +1,4 @@
----
-title: "IAM Lab"
-chapter: false
-weight: 30
-tags:
-  - IAM
-  - EC2
-  - IAM Role
-  - IAM User
-  - IAM Group
----
+
 
 |  | |
 | --- | --- |
