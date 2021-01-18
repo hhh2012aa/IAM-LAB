@@ -317,7 +317,7 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: hrEC2InstanceInstanceProfile07C2362D
-      ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
+      ImageId: Ref: MyImageID
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
@@ -383,7 +383,7 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: financeEC2InstanceInstanceProfileBFA4E700
-      ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
+      ImageId: Ref: MyImageID
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
@@ -413,4 +413,11 @@ Parameters:
   IAMUserPassword:
     Type: String
     Default: 123456789aA
-    Description: Enter the your IAM user password, password should be at least one lowercase and one uppercase
+    Description: >-
+      Enter the your IAM user password, password should be at least one
+      lowercase and one uppercase
+  MyImageID:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
+    Description: >-
+      Enter Image ID for EC2 instances 
