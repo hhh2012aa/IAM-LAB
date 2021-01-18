@@ -318,7 +318,7 @@ Resources:
       IamInstanceProfile:
         Ref: hrEC2InstanceInstanceProfile07C2362D
       ImageId: 
-        Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+        Type: String
         Default: '/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2'
       InstanceType: t2.micro
       SecurityGroupIds:
@@ -386,7 +386,7 @@ Resources:
       IamInstanceProfile:
         Ref: financeEC2InstanceInstanceProfileBFA4E700
       ImageId: 
-        Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+        Type: String
         Default: '/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2'
       InstanceType: t2.micro
       SecurityGroupIds:
