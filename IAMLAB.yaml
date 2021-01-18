@@ -417,4 +417,4 @@ Parameters:
   IAMUserPassword:
     Type: String
     Default: 123456789aA
-    Description: Enter the your IAM user password, password should be at least one lower case and one uppercase
+    Description: Enter the your IAM user password, password should be at least one lowercase and one uppercase
