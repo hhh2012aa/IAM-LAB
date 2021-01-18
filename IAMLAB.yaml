@@ -317,7 +317,8 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: hrEC2InstanceInstanceProfile07C2362D
-      ImageId: Ref: MyImageID
+      ImageId: 
+        Ref: MyImageID
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
@@ -383,7 +384,8 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: financeEC2InstanceInstanceProfileBFA4E700
-      ImageId: Ref: MyImageID
+      ImageId: 
+        Ref: MyImageID
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
