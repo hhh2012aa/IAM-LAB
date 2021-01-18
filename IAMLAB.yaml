@@ -282,8 +282,10 @@ Resources:
 
         Ref: MyVpcF9F0CA6F
 
-      AvailabilityZone: us-east-1a
-
+      AvailabilityZone: !Select 
+         - 0
+         - Fn::GetAZs: !Ref 'AWS::Region'
+      
       MapPublicIpOnLaunch: true
 
       Tags:
@@ -424,7 +426,7 @@ Resources:
 
         Ref: MyVpcF9F0CA6F
 
-      AvailabilityZone: us-east-1a
+      AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
 
       MapPublicIpOnLaunch: false
 
@@ -626,7 +628,7 @@ Resources:
 
     Properties:
 
-      AvailabilityZone: us-east-1a
+      AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
 
       IamInstanceProfile:
 
@@ -760,7 +762,7 @@ Resources:
 
     Properties:
 
-      AvailabilityZone: us-east-1a
+      AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
 
       IamInstanceProfile:
 
