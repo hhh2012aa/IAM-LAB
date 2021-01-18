@@ -317,7 +317,7 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: hrEC2InstanceInstanceProfile07C2362D
-      ImageId: !FindInMap [ RegionMap, !Ref 'AWS::Region', AMI ]
+      ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
@@ -383,7 +383,7 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: financeEC2InstanceInstanceProfileBFA4E700
-        ImageId: !FindInMap [ RegionMap, !Ref 'AWS::Region', AMI ]
+        ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
