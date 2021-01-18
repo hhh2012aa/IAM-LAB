@@ -317,7 +317,9 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: hrEC2InstanceInstanceProfile07C2362D
-      ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
+      ImageId: 
+        Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+        Default: '/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2'
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
@@ -383,7 +385,9 @@ Resources:
       AvailabilityZone: !GetAtt MyVpcPublicSubnet1SubnetF6608456.AvailabilityZone
       IamInstanceProfile:
         Ref: financeEC2InstanceInstanceProfileBFA4E700
-      ImageId: /aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2
+      ImageId: 
+        Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+        Default: '/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2'
       InstanceType: t2.micro
       SecurityGroupIds:
         - 'Fn::GetAtt':
